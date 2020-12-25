@@ -38,7 +38,10 @@
     "keywords": [
         "gatsby",
         "gatsby-plugin",
-        "gatsby-remark"
+        "gatsby-remark",
+        "gatsby-embed-script",
+        "gatsby-embed-gist",
+        "gatsby-embed-url"
     ],
     "license": "MIT"
 }
