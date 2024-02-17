@@ -1,5 +1,4 @@
 const visit = require("unist-util-visit")
-const toString = require("mdast-util-to-string")
 const fetch = require('node-fetch');
 
 module.exports = async ({ markdownAST }, pluginOptions) => {

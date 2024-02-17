@@ -15,8 +15,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 21
-      - run: npm ci
-      - run: npm test
+      - run: yarn install --immutable --immutable-cache --check-cache
 
   publish-npm:
     needs: build
@@ -27,7 +26,7 @@ jobs:
         with:
           node-version: 21
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
-      - run: npm publish
+      - run: yarn install --immutable --immutable-cache --check-cache
+      - run: yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
