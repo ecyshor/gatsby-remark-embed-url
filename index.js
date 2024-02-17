@@ -1,9 +1,6 @@
 const visit = require("unist-util-visit");
-
 const toString = require("mdast-util-to-string");
-
 const fetch = require('node-fetch');
-
 module.exports = async ({
   markdownAST
 }, pluginOptions) => {
@@ -18,16 +15,13 @@ module.exports = async ({
     console.log("Fetching url for code block: " + linkNode.url);
     let sourceUrl = linkNode.url.trim();
     let codeUrl = sourceUrl;
-
     if (codeUrl.toLowerCase().startsWith("https://github.com")) {
       codeUrl = codeUrl.replace("https://github.com", "https://raw.githubusercontent.com").replace("blob/", "");
     }
-
     if (codeUrl.toLowerCase().startsWith("https://gist.githubusercontent.com")) {
       const paths = codeUrl.replace("https://gist.githubusercontent.com/", "").split("/");
       sourceUrl = "https://gist.github.com/" + paths[0] + "/" + paths[1] + "#" + paths[4];
     }
-
     const codeNode = {
       type: "code",
       value: codeUrl,

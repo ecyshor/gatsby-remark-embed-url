@@ -8,19 +8,21 @@
         "url": "https://github.com/ecyshor/gatsby-remark-embed-url.git"
     },
     "dependencies": {
-        "@babel/runtime": "^7.12.5",
-        "lz-string": "^1.4.4",
-        "node-fetch": "^2.6.1",
+        "@babel/runtime": "^7.23.9",
+        "lz-string": "^1.5.0",
+        "node-fetch": "^3.3.2",
         "normalize-path": "^3.0.0",
-        "npm-package-arg": "^6.1.1",
-        "recursive-readdir": "^2.2.2",
-        "unist-util-map": "^1.0.5",
-        "urijs": "^1.19.2"
+        "npm-package-arg": "^11.0.1",
+        "recursive-readdir": "^2.2.3",
+        "unist-util-map": "^4.0.0",
+        "urijs": "^1.19.11"
     },
     "devDependencies": {
-        "@babel/cli": "^7.12.1",
-        "@babel/core": "^7.12.3",
-        "babel-preset-gatsby-package": "^0.9.0-next.0",
+        "@babel/cli": "^7.23.9",
+        "@babel/core": "^7.23.9",
+        "@babel/plugin-proposal-optional-chaining": "7.21.0",
+        "@babel/plugin-transform-nullish-coalescing-operator": "7.23.4",
+        "babel-preset-gatsby-package": "^3.13.1",
         "cross-env": "^7.0.2"
     },
     "main": "index.js",
@@ -33,7 +35,7 @@
         "watch": "babel -w src --out-dir . --ignore \"**/__tests__\""
     },
     "engines": {
-        "node": ">=10.13.0"
+        "node": ">=18.0.0"
     },
     "keywords": [
         "gatsby",
