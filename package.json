@@ -1,7 +1,7 @@
 {
     "name": "gatsby-remark-embed-url",
     "description": "Gatsby plugin to embed script output",
-    "version": "0.1.1",
+    "version": "1.0.0",
     "author": "Nicu Reut <contact@nicu.dev>",
     "repository": {
         "type": "git",
