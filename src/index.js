@@ -1,7 +1,7 @@
-import visit from "unist-util-visit";
-import fetch from "node-fetch";
+const visit = require("unist-util-visit");
+const fetch = require("node-fetch");
 
-export default async ({ markdownAST }, pluginOptions) => {
+module.exports = async ({ markdownAST }, pluginOptions) => {
   var nodes = [];
   visit(markdownAST, "paragraph", (node) => {
     if (node.children.length != 3) return;

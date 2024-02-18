@@ -1,6 +1,6 @@
-import visit from "unist-util-visit";
-import fetch from "node-fetch";
-export default (async ({
+const visit = require("unist-util-visit");
+const fetch = require("node-fetch");
+module.exports = async ({
   markdownAST
 }, pluginOptions) => {
   var nodes = [];
@@ -47,4 +47,4 @@ export default (async ({
     node.value = await fetch(node.value).then(response => response.text());
   }));
   return markdownAST;
-});
+};
